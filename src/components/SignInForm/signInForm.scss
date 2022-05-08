@@ -1,0 +1,15 @@
+.field:not(:last-child) {
+  margin-bottom: 2em;
+}
+
+.field {
+  * {
+    width: 100%;
+  }
+
+  input {
+    padding: 0.5em 0;
+    border: none;
+    border-bottom: 1px solid #00000042;
+  }
+}
