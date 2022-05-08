@@ -1,6 +1,6 @@
 <template>
   <transition name="modal-fade">
-    <div class="modal-backdrop">
+    <div class="modal-backdrop" @click.self="$emit('close')">
       <div class="modal">
         <div class="modal-content">
           <slot></slot>

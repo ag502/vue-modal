@@ -7,18 +7,18 @@
 
     <main>
       <div class="control">
-        <button>Sign in</button>
+        <button @click="isSignInModalOpen = true">Sign in</button>
       </div>
       <div class="control">
-        <button>Sign up</button>
+        <button @click="isSignUpModalOpen = true">Sign up</button>
       </div>
     </main>
 
-    <ModalContainer v-show="false">
+    <ModalContainer v-show="isSignInModalOpen" @close="isSignInModalOpen = false">
       <SignInForm />
     </ModalContainer>
 
-    <ModalContainer v-show="false">
+    <ModalContainer v-show="isSignUpModalOpen" @close="isSignUpModalOpen = false">
       <SignUpForm />
     </ModalContainer>
   </div>
@@ -34,6 +34,13 @@ export default {
     ModalContainer,
     SignInForm,
     SignUpForm,
+  },
+
+  data() {
+    return {
+      isSignInModalOpen: false,
+      isSignUpModalOpen: false,
+    };
   },
 };
 </script>
