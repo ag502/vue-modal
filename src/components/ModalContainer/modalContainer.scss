@@ -1,0 +1,40 @@
+.modal-backdrop {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #00000042;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+
+  .modal-content {
+    width: 100%;
+    height: 100%;
+    padding: 3em 2em;
+    background-color: #fff;
+  }
+}
+
+.modal-backdrop:is(.modal-fade-enter, .modal-fade-leave-active) {
+  opacity: 0;
+
+  .moodal-content {
+    transform: translateY(-30px);
+  }
+}
+
+.modal-backdrop:is(.modal-fade-enter-active, .modal-fade-leave-active) {
+  transition: opacity 0.5s ease;
+
+  .modal-content {
+    transition: transform 0.5s ease;
+  }
+}

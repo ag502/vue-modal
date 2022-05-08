@@ -2,7 +2,10 @@
   <div id="app">
     <header>
       <h1>Modular modals in Vue from scratch</h1>
-      <p>Click one of the buttons to open corresponding popup or click popup backdrop to close it</p>
+      <p>
+        Click one of the buttons to open corresponding popup or click popup
+        backdrop to close it
+      </p>
     </header>
 
     <main>
