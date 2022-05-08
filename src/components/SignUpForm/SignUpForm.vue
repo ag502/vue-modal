@@ -1,10 +1,13 @@
 <template>
   <form class="form" @submit="onSubmitForm">
     <div class="field">
-      <input type="text" placholder="Login" id="login" />
+      <input type="text" placeholder="Login" id="login" />
     </div>
     <div class="field">
       <input type="email" placeholder="Email" id="email" />
+    </div>
+    <div class="field">
+      <input type="password" placeholder="Password" id="password" />
     </div>
     <div class="field">
       <button class="button" type="submit">Submit</button>
