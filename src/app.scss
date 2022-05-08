@@ -1,0 +1,19 @@
+#app {
+  width: 600px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2em 4em;
+  background-color: #fff;
+}
+
+header {
+  margin-bottom: 3em;
+}
+
+main {
+  display: flex;
+}
+
+.control:not(:last-child) {
+  margin-right: 1em;
+}
