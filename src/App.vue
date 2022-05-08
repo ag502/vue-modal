@@ -7,18 +7,18 @@
 
     <main>
       <div class="control">
-        <button @click="isSignInModalOpen = true">Sign in</button>
+        <button @click="$modal.open(signInModalName)">Sign in</button>
       </div>
       <div class="control">
-        <button @click="isSignUpModalOpen = true">Sign up</button>
+        <button @click="$modal.open(signUpModalName)">Sign up</button>
       </div>
     </main>
 
-    <ModalContainer v-show="isSignInModalOpen" @close="isSignInModalOpen = false">
+    <ModalContainer :name="signInModalName">
       <SignInForm />
     </ModalContainer>
 
-    <ModalContainer v-show="isSignUpModalOpen" @close="isSignUpModalOpen = false">
+    <ModalContainer :name="signUpModalName">
       <SignUpForm />
     </ModalContainer>
   </div>
@@ -38,8 +38,8 @@ export default {
 
   data() {
     return {
-      isSignInModalOpen: false,
-      isSignUpModalOpen: false,
+      signInModalName: "sign-in",
+      signUpModalName: "sign-up",
     };
   },
 };
