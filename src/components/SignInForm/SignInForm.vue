@@ -25,5 +25,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./signUpForm.scss";
+@import "./signInForm.scss";
 </style>
